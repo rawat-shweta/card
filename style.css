@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards {
+    width: 100%;
+    height: 500px;
+    padding: 60px 40px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.card {
+    height: 350px;
+    padding: 5px 0px 0px 0px;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    place-items: center;
+    background-color: rosybrown;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    flex: 1;
+}
+.poster {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    z-index: 1;
+    margin-top: 20px;
+    transition: .5s;
+    border: 0px solid white;
+}
+.poster img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0px solid #e11867;
+    transition: .5s;
+}
+.detail {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 22px;
+    text-align: center;
+}
+.social {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+.social ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+    gap: 10px;
+    transition: .2s;
+}
+.social ul li {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+.social ul li i {
+    height: 35px;
+    width: 35px;
+    display: grid;
+    place-items: center;
+}
+.card:hover .social {
+    width: 100%;
+    background-color: #e11867;
+    color: white;
+    height: 100%;
+    transition: .5s;
+}
+.card:hover .poster img {
+    border: 5px solid #e11867;
+    transition: .5s;
+}
+.card:hover .poster {
+   border: 5px solid white;
+    transition: .5s;
+}
+.social ul li i:hover {
+    transition: .3s;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+.layer {
+    width: 100%;
+    height: 0px;
+    background-color: #e11867;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    position: absolute;
+    top: 0;
+    transition: .5s;
+}
+.card:hover .layer {
+    height: 150px;
+    transition: .5s;
+}
